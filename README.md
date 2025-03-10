@@ -4,7 +4,7 @@
 
 Details of clone project:
 
-- [Project Link](https://wdm-ecommerce-ai.vercel.app/)
+- [Project Link](https://wdm-ecom.vercel.app/)
 - Tech Stack:
   1. HTML5
   2. CSS3
