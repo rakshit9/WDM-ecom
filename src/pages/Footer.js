@@ -8,19 +8,10 @@ const Footer = () => {
       <div className="footer-container">
         {/* Footer Links */}
         <div className="footer-links">
-          <div className="footer-column">
-            <h3>Company</h3>
-            <Link to="/about">About Us</Link>
-            <Link to="/careers">Careers</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/press">Press</Link>
-          </div>
+          
           <div className="footer-column">
             <h3>Support</h3>
             <Link to="/contact">Contact Us</Link>
-            <Link to="/faq">FAQs</Link>
-            <Link to="/help">Help Center</Link>
-            <Link to="/terms">Terms of Service</Link>
           </div>
           <div className="footer-column">
             <h3>Follow Us</h3>

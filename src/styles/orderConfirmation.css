@@ -5,35 +5,121 @@ Sudhamsh Rama - 1002210904
 Raghav Narayan Ramachandran - 1002140654
 Venkata Ravi Teja Sandram - 1002080570
 */
-.order-confirmation {
-  max-width: 500px;
+.order_container {
+  max-width: 900px;
   margin: 50px auto;
   padding: 20px;
-  text-align: center;
-  background: white;
+  background: #1e1e1e;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.order-confirmation h2 {
-  color: black;
-  margin-bottom: 20px;
-}
-
-.order-confirmation p {
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.order-confirmation a {
-  display: inline-block;
-  background-color: black;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
   color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+  text-align: center;
 }
 
-.order-confirmation a:hover {
-  background-color: #ffcc00;
+.order_container h2 {
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+/* Order Items */
+.order_items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Order Item */
+.order_item {
+  display: flex;
+  align-items: center;
+  background: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(255, 255, 255, 0.1);
+  gap: 15px;
+}
+
+.order_item-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.order_item-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.order_item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.order_item-price,
+.order_item-quantity {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+/* Order Summary */
+.order_summary {
+  margin-top: 30px;
+  padding: 15px;
+  background: #333;
+  border-radius: 8px;
+}
+
+.order_summary p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Pay Now Button */
+.order_pay-button {
+  background: #ffcc00;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.order_pay-button:hover {
+  background: #e6b800;
+}
+
+/* Empty Order Message */
+.order_empty {
+  font-size: 1.2rem;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .order_container {
+    width: 95%;
+  }
+
+  .order_item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .order_item-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .order_summary {
+    text-align: center;
+  }
 }

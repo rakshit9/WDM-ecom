@@ -30,30 +30,37 @@ const Main = () => {
     {
       img: "https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg",
       name: "Fresh Fruits",
+      price: "$5.99/kg",
     },
     {
       img: "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg",
       name: "Organic Vegetables",
+      price: "$2.99/kg",
     },
     {
       img: "https://images.pexels.com/photos/31012757/pexels-photo-31012757.jpeg",
       name: "Dairy Products",
+      price: "$2.99/gl",
     },
     {
       img: "https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg",
       name: "Bakery & Breads",
+      price: "$6.99/peice",
     },
     {
       img: "https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg",
       name: "Fresh Meat",
+      price: "$12.79/kg",
     },
     {
       img: "https://images.pexels.com/photos/1582482/pexels-photo-1582482.jpeg",
       name: "Healthy Snacks",
+      price: "$1.99/pack",
     },
     {
       img: "https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg",
       name: "Beverages",
+      price: "$8.99/bottle",
     },
   ];
 
@@ -67,7 +74,7 @@ const Main = () => {
             Quality groceries at your fingertips. Experience freshness like
             never before.
           </p>
-          <Link to="/shop" className="btn shop-now-btn">
+          <Link to="/productList" className="btn shop-now-btn">
             Shop Now
           </Link>
         </div>
@@ -86,32 +93,61 @@ const Main = () => {
         </Slider>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="why-choose-us">
-        <h2>Why Shop With Us?</h2>
-        <div className="benefits">
-          <div className="benefit-card">🚀 Fast Delivery</div>
-          <div className="benefit-card">🥗 100% Organic</div>
-          <div className="benefit-card">💰 Best Prices</div>
-          <div className="benefit-card">🌎 Eco-Friendly Packaging</div>
-          <div className="benefit-card">🔄 Easy Returns</div>
+      {/* Featured Products Section */}
+      <section className="featured-products-home">
+        <h2>Top Picks for You</h2>
+        <div className="product-grid-home">
+          {categories.map((product, index) => (
+            <div key={index} className="product-card-home">
+              <img src={product.img} alt={product.name} />
+              <div className="product-info-home">
+                <h3>{product.name}</h3>
+                <p className="price-home">{product.price}</p>
+                <Link to="/productList" className="btn buy-btn">
+                  Shop Now
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Deals & Discounts Section */}
-      <section className="deals">
-        <div className="deal-banner">
-          <h2>Exclusive Deals & Discounts</h2>
-          <br />
-          <h3>Get 30% Off on Your First Order!</h3>
-          <p>
-            Use code: <strong>FRESH30</strong> at checkout.
-          </p>
-          <br />
-          <Link to="/shop" className="btn discount-btn">
-            Claim Offer
-          </Link>
+      {/* Why Choose Us Section */}
+      <section className="why-choose-us">
+        <div className="why-container">
+          {/* Left Side - Title & Logo */}
+          <div className="why-left">
+            <h2>Why Shop With Us?</h2>
+            <img src="ecommerce.png" alt="Why Choose Us" className="why-logo" />
+          </div>
+
+          {/* Right Side - Benefits Checklist */}
+          <div className="why-right">
+            <ul className="benefit-list">
+              <li>Fast & Reliable Delivery</li>
+              <li>100% Organic & Fresh Products</li>
+              <li>Best Prices & Exclusive Discounts</li>
+              <li>Eco-Friendly & Sustainable Packaging</li>
+              <li>Easy Returns & Hassle-Free Refunds</li>
+            </ul>
+          </div>
         </div>
+        {/* Deals & Discounts Section */}
+
+        <section className="deals">
+          <div className="deal-banner">
+            <h2>Exclusive Deals & Discounts</h2>
+            <p>
+              Get <strong>30% Off</strong> on Your First Order!
+            </p>
+            <p>
+              Use code: <strong>FRESH30</strong> at checkout.
+            </p>
+            <Link to="/productList" className="btn discount-btn">
+              Claim Offer
+            </Link>
+          </div>
+        </section>
       </section>
 
       {/* Customer Testimonials */}
@@ -138,6 +174,23 @@ const Main = () => {
               Five stars!"
             </p>
             <h4>– Jessica R.</h4>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+
+      <section className="newsletterbg">
+        <div className="newsletter">
+          <h2>Stay Updated!</h2>
+          <p>Subscribe to get the latest deals and offers.</p>
+          <div className="newsletter-form">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="newsletter-input"
+            />
+            <button className="btn newsletter-btn">Subscribe</button>
           </div>
         </div>
       </section>

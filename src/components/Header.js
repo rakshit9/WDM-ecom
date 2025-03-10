@@ -79,9 +79,9 @@ const Header = () => {
           <Link to="/productList" className="nav-item">
             Products
           </Link>
-          <Link to="/users" className="nav-item">
+          {/* <Link to="/users" className="nav-item">
             Users
-          </Link>
+          </Link> */}
           <Link to="/orders" className="nav-item">
             Orders
           </Link>
@@ -128,9 +128,9 @@ const Header = () => {
             <Link to="/productList" className="menu-item">
               Products
             </Link>
-            <Link to="/users" className="menu-item">
+            {/* <Link to="/users" className="menu-item">
               Users
-            </Link>
+            </Link> */}
             <Link to="/orders" className="menu-item">
               Orders
             </Link>

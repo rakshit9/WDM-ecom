@@ -10,7 +10,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Header from "./components/Header";
 import ProducstList from "./pages/ProductsList";
 import FavoriteProducts from "./pages/FavoriteProducts";
-import OrderConfirmation from "./components/OrderConfirmation";
+import OrderConfirmation from "./pages/OrderConfirmation";
 import Contact from "./pages/Contact";
 import ProductDetails from "./pages/ProductDetails";
 import Checkout from "./components/Checkout";
@@ -18,6 +18,7 @@ import Cart from "./pages/Cart";
 import Footer from "./pages/Footer";
 import Main from "./pages/Main";
 import AccountSettings from "./pages/AccountSettings";
+import Order from "./pages/Order";
 // const PrivateRoute = ({ children }) => {
 //   const { user } = React.useContext(AuthContext);
 //   return user ? children : <Navigate to="/login" />;
@@ -41,6 +42,7 @@ function App() {
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/order-confirmation" element={<OrderConfirmation />} />
+            <Route path="/orders" element={<Order />} />
             <Route path="/accountsettings" element={<AccountSettings />} />
 
             <Route path="/dashboard" element={<Dashboard />}>

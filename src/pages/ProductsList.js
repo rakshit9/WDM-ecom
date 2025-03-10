@@ -2,18 +2,8 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/productsList.css";
 import { SlidersHorizontal, ChevronLeft, ChevronRight, Heart } from "lucide-react";
+import products from "../constant/constants";
 
-// Generate Products
-const products = Array.from({ length: 70 }, (_, index) => ({
-  id: index + 1,
-  name: `Product ${index + 1}`,
-  brand: `Brand ${String.fromCharCode(65 + (index % 3))}`, 
-  price: Math.floor(Math.random() * 100) + 20,
-  description: "High-quality product with great performance.",
-  availability: index % 5 === 0 ? "Out of Stock" : index % 3 === 0 ? "Limited Stock" : "In Stock",
-  specialOffer: index % 4 === 0 ? "10% Off" : index % 6 === 0 ? "Buy 1 Get 1 Free" : null,
-  image: "https://i5.walmartimages.com/seo/Fresh-Whole-Yellow-Onion-Each.jpeg"
-}));
 
 // Extract unique brand names
 const uniqueBrands = [...new Set(products.map((product) => product.brand))];
@@ -41,7 +31,8 @@ export default function ProductList() {
   }, [favoriteProducts]);
 
 
-  const addToCart = (productId) => {
+  const addToCart = (event, productId) => {
+    event.stopPropagation();
     try {
       // Retrieve cart from localStorage or initialize an empty array
       let existingCart = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -68,7 +59,8 @@ export default function ProductList() {
   };
 
   // ⭐ Toggle favorite product
-  const toggleFavorite = (productId) => {
+  const toggleFavorite = (event, productId) => {
+    event.stopPropagation();
     setFavoriteProducts((prevFavorites) =>
       prevFavorites.includes(productId)
         ? prevFavorites.filter((id) => id !== productId) // Remove favorite
@@ -116,7 +108,6 @@ export default function ProductList() {
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = sortedProducts.slice(indexOfFirstProduct, indexOfLastProduct);
 
-  
 
   return (
     <div className="product-list-container">
@@ -160,7 +151,7 @@ export default function ProductList() {
           {currentProducts.length > 0 ? (
             currentProducts.map((product) => (
               <div key={product.id} className="product-card"   onClick={() => navigate(`/product/${product.id}`)}>
-                <button className={`favorite-button ${favoriteProducts.includes(product.id) ? "favorited" : ""}`} onClick={() => toggleFavorite(product.id)}>
+                <button className={`favorite-button ${favoriteProducts.includes(product.id) ? "favorited" : ""}`} onClick={(event) => toggleFavorite( event, product.id)}>
                   <Heart size={20} />
                 </button>
                 <img src={product.image} alt={product.name} className="product-image" />
@@ -175,7 +166,7 @@ export default function ProductList() {
                 <button
                   className="add-to-cart"
                   disabled={product.availability === "Out of Stock"}
-                  onClick={() => addToCart(product.id)}
+                  onClick={(event) => addToCart(event, product.id)}
                 >
                   {product.availability === "Out of Stock" ? "Out of Stock" : "🛒 Add to Cart"}
                 </button>    </div>

@@ -5,21 +5,21 @@ import products from "../constant/constants"; // Adjust path if needed
 
 // Placeholder images for now
 const placeholderImages = [
-  "https://images.unsplash.com/photo-1559583985-c80d8ad9b29f?q=80&w=3087&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1536632856133-3a3441454dd5?q=80&w=3087&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1586861642026-74a6da22a3cd?q=80&w=3088&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1536746803623-cef87080bfc8?q=80&w=3085&auto=format&fit=crop",
-];
+  "https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg",
+  "https://images.pexels.com/photos/65175/pexels-photo-65175.jpeg",
+  "https://images.pexels.com/photos/1582482/pexels-photo-1582482.jpeg",
+  "https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg"
+ ];
 
 export default function ProductDetails({ selectedProduct }) {
   const product = selectedProduct || {
     id:2,
-    name: "Luxury Modern Product",
+    name: "Cheddar Cheese",
     description:
       "A premium product with exceptional design and top-notch quality.",
     price: 89.99,
     images: placeholderImages,
-    brand: "Brand B",
+    brand: "Dole",
   };
 
   const [selectedImage, setSelectedImage] = useState(product.images[0]);
@@ -89,7 +89,7 @@ export default function ProductDetails({ selectedProduct }) {
           <span className="product_favorite-text">Save for later and get quick access to this product.</span>
         </div>
 
-        
+
           {/* Quantity Selector */}
           <div className="product_quantity-container">
             <button className="product_quantity-btn" onClick={decreaseQuantity}>

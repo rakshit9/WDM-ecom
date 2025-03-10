@@ -148,86 +148,6 @@ Venkata Ravi Teja Sandram - 1002080570
   }
 }
 
-/* Why Choose Us */
-.why-choose-us {
-  background: #000000;
-  padding: 50px 0;
-  height: 300px;
-}
-
-.why-choose-us h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-/* Hide Deals section on small screens */
-@media (max-width: 1024px) {
-  .why-choose-us {
-    display: none;
-  }
-}
-
-.benefits {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.benefit-card {
-  background: #ffcc00;
-  padding: 15px 20px;
-  border-radius: 10px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  transition: transform 0.3s ease;
-}
-
-.benefit-card:hover {
-  transform: scale(1.1);
-}
-
-/* Deals & Discounts */
-.deals {
-  background: #000000;
-  padding: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-/* Hide Deals section on small screens */
-@media (max-width: 1024px) {
-  .deals {
-    display: none;
-  }
-}
-
-.deal-banner {
-  position: relative;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  border-radius: 15px;
-  backdrop-filter: blur(8px);
-  width: 500px;
-  max-width: 90%;
-  text-align: center;
-}
-
-.discount-btn {
-  background: white;
-  color: black;
-  padding: 10px 15px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.discount-btn:hover {
-  background: #e6e6e6;
-}
-
 /* Testimonials */
 .testimonials {
   background: #f8f8f8;
@@ -327,5 +247,301 @@ Venkata Ravi Teja Sandram - 1002080570
 
   .testimonial-card {
     width: 80%;
+  }
+}
+
+/* Featured Products Section */
+.featured-products-home {
+  text-align: center;
+  margin: 0px 0;
+  padding: 40px 20px;
+  background: #f8f8f8;
+}
+
+.featured-products-home h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Product Grid */
+.product-grid-home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Product Cards */
+.product-card-home {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-card-home img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Product Info */
+.product-info-home {
+  padding: 15px;
+}
+
+.product-info-home h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-info-home .price-home {
+  font-size: 1.2rem;
+  color: #ff6600;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Buy Button */
+.buy-btn {
+  display: inline-block;
+  background: #ffcc00;
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.buy-btn:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+
+/* Hover Effects */
+.product-card-home:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-grid-home {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid-home {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .featured-products-home h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.newsletterbg {
+  background: #f8f8f8;
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Newsletter Section */
+.newsletter {
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  padding: 50px;
+  text-align: center;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.newsletter h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.newsletter p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Email Input */
+.newsletter-input {
+  width: 60%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin-right: 10px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Subscribe Button */
+.newsletter-btn {
+  padding: 15px 25px;
+  border-radius: 8px;
+  background: #000;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .newsletter {
+    padding: 40px;
+    max-width: 90%;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+  }
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.pexels.com/photos/3737698/pexels-photo-3737698.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+      no-repeat center center/cover;
+  padding: 60px 10%;
+}
+
+.why-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Left Side */
+.why-left {
+  width: 50%;
+  text-align: left;
+}
+
+.why-left h2 {
+  font-size: 2rem;
+  color: linear-gradient(135deg, #bac567, #333);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.why-logo {
+  width: 150px;
+  margin-left: 100px;
+  align-items: center;
+}
+
+/* Right Side - Checklist */
+.why-right {
+  width: 50%;
+}
+
+.benefit-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefit-list li {
+  font-size: 1rem;
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.benefit-list li::before {
+  content: "✔";
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #ffcc00;
+}
+
+/* Deals & Discounts Section */
+.deals {
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  padding: 90px;
+  text-align: center;
+  border-radius: 15px;
+  max-width: 800px;
+  margin: 40px auto;
+  color: white;
+}
+
+.deal-banner h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.deal-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Claim Offer Button */
+.discount-btn {
+  display: inline-block;
+  background: #ffcc00;
+  color: black;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.discount-btn:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .why-left,
+  .why-right {
+    width: 100%;
+  }
+
+  .benefit-list li {
+    font-size: 1.1rem;
   }
 }

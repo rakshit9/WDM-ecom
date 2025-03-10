@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import "../styles/cart.css";
+import { useNavigate } from "react-router-dom";
 import products from "../constant/constants"; // Import products from constants
 
 export default function Cart() {
   const [cartItems, setCartItems] = useState([]);
-
+  const navigate = useNavigate();
   // Load cart data from localStorage and map with product details
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -64,6 +65,16 @@ export default function Cart() {
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
+  const proceedToCheckout = () => {
+    if (cartItems.length === 0) {
+      alert("Your cart is empty!");
+      return;
+    }
+
+    navigate("/order-confirmation"); // Navigate to order confirmation page
+  };
+
+
   return (
     <div className="cart_container">
       <h2>Your Shopping Cart</h2>
@@ -99,7 +110,7 @@ export default function Cart() {
       {cartItems.length > 0 && (
         <div className="cart_summary">
           <p><strong>Total:</strong> ${calculateTotal().toFixed(2)}</p>
-          <button className="cart_buy-button">Proceed to Checkout</button>
+          <button className="cart_buy-button" onClick={proceedToCheckout}>Proceed to Checkout</button>
         </div>
       )}
     </div>
