@@ -92,10 +92,7 @@ const Header = () => {
             Contact
           </Link>
 
-          <Link to="/accountsettings" className="icon-link">
-            <FaUserCircle className="icon" />
-          </Link>
-
+        
           {/* Cart Icon with Item Count */}
           <Link to="/cart" className="icon-link cart-icon">
             <FaShoppingCart className="icon" />
@@ -103,6 +100,10 @@ const Header = () => {
               <span className="cart-count">{cartItemCount}</span>
             )}
           </Link>
+          <Link to="/accountsettings" className="icon-link">
+            <FaUserCircle className="icon" />
+          </Link>
+
 
           <div className="auth-links">
             <Link to="/login" className="login-btn">
