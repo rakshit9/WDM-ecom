@@ -1,0 +1,67 @@
+/* Group 7 Ecommerce AI
+Rakshitbhai Mansukhbhai Sarkheliya - 1002112755
+Gadhiraju Sai Anusha – 1002248851
+Sudhamsh Rama - 1002210904
+Raghav Narayan Ramachandran - 1002140654
+Venkata Ravi Teja Sandram - 1002080570
+*/
+.contact-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+  color: black;
+  margin-bottom: 20px;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-container button {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contact-container button:hover {
+  background-color: #ffcc00;
+}
+
+/* Contact Info Section */
+.contact-info {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.contact-info strong {
+  color: #333;
+}

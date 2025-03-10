@@ -1,0 +1,81 @@
+/* Group 7 Ecommerce AI
+Rakshitbhai Mansukhbhai Sarkheliya - 1002112755
+Gadhiraju Sai Anusha – 1002248851
+Sudhamsh Rama - 1002210904
+Raghav Narayan Ramachandran - 1002140654
+Venkata Ravi Teja Sandram - 1002080570
+*/
+
+/* Main Container */
+.account-settings-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Headings */
+.account-settings-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+}
+
+.checkbox-group input {
+  margin-right: 10px;
+}
+
+/* Save Button */
+.save-btn {
+  background-color: #ffcc00;
+  color: black;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #e6b800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .account-settings-container {
+    width: 90%;
+    padding: 15px;
+  }
+}
