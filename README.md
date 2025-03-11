@@ -4,7 +4,7 @@
 
 Details of clone project:
 
-- [Project Link](https://wdm-ecom.vercel.app/)
+- [Project Link](https://rxs2755.uta.cloud/)
 - Tech Stack:
   1. HTML5
   2. CSS3
