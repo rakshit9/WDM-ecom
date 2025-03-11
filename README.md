@@ -30,6 +30,7 @@ Details of clone project:
 ### Requirements
 
 - A stable internet connection and an up-to-date browser.
+- Node Version PreInstall (Recommended: v16+)
 
 ---
 
