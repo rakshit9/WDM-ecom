@@ -1,0 +1,308 @@
+/* Group 7 Ecommerce AI
+Rakshitbhai Mansukhbhai Sarkheliya - 1002112755
+Gadhiraju Sai Anusha – 1002248851
+Sudhamsh Rama - 1002210904
+Raghav Narayan Ramachandran - 1002140654
+Venkata Ravi Teja Sandram - 1002080570
+*/
+.order_container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+}
+
+.order_container h2 {
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+/* Order Items */
+.order_items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Order Item */
+.order_item {
+  display: flex;
+  align-items: center;
+  background: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(255, 255, 255, 0.1);
+  gap: 15px;
+}
+
+.order_item-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.order_item-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.order_item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.order_item-price,
+.order_item-quantity {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+/* Order Summary */
+.order_summary {
+  margin-top: 30px;
+  padding: 15px;
+  background: #333;
+  border-radius: 8px;
+}
+
+.order_summary p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Pay Now Button */
+.order_pay-button {
+  background: #ffcc00;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.order_pay-button:hover {
+  background: #e6b800;
+}
+
+/* Empty Order Message */
+.order_empty {
+  font-size: 1.2rem;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .order_container {
+    width: 95%;
+  }
+
+  .order_item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .order_item-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .order_summary {
+    text-align: center;
+  }
+}
+
+
+.order_address {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.address_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-btn {
+  background: transparent;
+  border: none;
+  color: #ffcc00;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 20px auto; /* center horizontally */
+  box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.1);
+  color: #000;
+}
+
+.edit-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.save-btn {
+  background: #ffcc00;
+  color: black;
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.save-btn:hover {
+  background: #e6b800;
+}
+.card_form {
+  margin: 30px auto;
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.card_form h3 {
+  margin-bottom: 15px;
+  color: #ffcc00;
+  text-align: center;
+}
+
+.card_form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+.confirm-payment-btn {
+  background-color: #ffcc00;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.confirm-payment-btn:hover {
+  background-color: #e6b800;
+}
+.payment-selection {
+  margin-top: 20px;
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.payment-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+.payment-option.selected {
+  border-color: #ffcc00;
+}
+
+.payment-option input[type="radio"] {
+  margin-right: 10px;
+}
+
+.card-info {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.card-info span {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.card-info small {
+  display: block;
+  color: #aaa;
+  font-size: 0.85rem;
+}
+
+.card-logo {
+  width: 50px;
+  height: auto;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  border: 2px solid #444;
+  padding: 12px 16px;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color 0.3s;
+  background-color: #2a2a2a;
+  color: #eee;
+  font-size: 1rem;
+}
+
+.payment-option:hover {
+  border-color: #ffcc00;
+}
+
+.payment-option input {
+  margin-right: 12px;
+  transform: scale(1.2);
+}
+
+.payment-option .brand-logo {
+  margin-left: auto;
+  font-weight: bold;
+  opacity: 0.6;
+}

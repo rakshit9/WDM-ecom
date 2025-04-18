@@ -1,0 +1,201 @@
+/* Group 7 Ecommerce AI
+Rakshitbhai Mansukhbhai Sarkheliya - 1002112755
+Gadhiraju Sai Anusha – 1002248851
+Sudhamsh Rama - 1002210904
+Raghav Narayan Ramachandran - 1002140654
+Venkata Ravi Teja Sandram - 1002080570
+*/
+
+.cart_container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+}
+
+.cart_container h2 {
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+/* Cart Items */
+.cart_items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cart Item */
+.cart_item {
+  display: flex;
+  align-items: center;
+  background: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(255, 255, 255, 0.1);
+  gap: 15px;
+}
+
+.cart_item-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+.cart_item-details {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.cart_item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cart_item-description {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+.cart_item-price {
+  font-size: 1rem;
+  color: #ffcc00;
+  margin-bottom: 5px;
+}
+
+.cart_item-brand {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 5px;
+}
+
+/* Availability Label */
+.cart_item-availability {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.cart_item-availability.out-of-stock {
+  color: #ff4444;
+}
+
+/* Quantity Selector */
+.cart_item-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+.cart_item-quantity button {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cart_item-quantity button:hover {
+  background: #666;
+}
+
+.cart_item-quantity span {
+  background: #1e1e1e;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Remove Button */
+.cart_item-delete {
+  background: #ff4444;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.cart_item-delete:hover {
+  background: #e60000;
+}
+
+/* Cart Summary */
+.cart_summary {
+  margin-top: 30px;
+  padding: 15px;
+  background: #333;
+  border-radius: 8px;
+}
+
+.cart_summary p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cart_buy-button {
+  background: #ffcc00;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.cart_buy-button:hover {
+  background: #e6b800;
+}
+
+/* Empty Cart Message */
+.cart_empty {
+  font-size: 1.2rem;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cart_container {
+    width: 95%;
+  }
+
+  .cart_item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart_item-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cart_item-quantity {
+    justify-content: center;
+  }
+
+  .cart_summary {
+    text-align: center;
+  }
+}

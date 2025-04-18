@@ -1,0 +1,183 @@
+/* Group 7 Ecommerce AI
+Rakshitbhai Mansukhbhai Sarkheliya - 1002112755
+Gadhiraju Sai Anusha – 1002248851
+Sudhamsh Rama - 1002210904
+Raghav Narayan Ramachandran - 1002140654
+Venkata Ravi Teja Sandram - 1002080570
+*/
+/* Order Page Container */
+/* Order Page Container */
+.order_container {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #000000;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* Page Title */
+.order_title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffcc00;
+}
+
+/* Order Group List */
+.order_list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Order Group Card */
+.order_group {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Order Date */
+.order_date {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffc107;
+  margin-bottom: 15px;
+}
+
+/* Order Item */
+.order_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.order_item:last-child {
+  border-bottom: none;
+}
+
+/* Product Image */
+.order_image {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Product Details */
+.order_details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.order_name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.order_brand,
+.order_quantity,
+.order_price,
+.order_subtotal {
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+/* Review Input Area */
+.review_input {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.review_textarea {
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: #121212;
+  color: #ffffff;
+  border: 1px solid #444444;
+  resize: vertical;
+  min-height: 60px;
+}
+
+.review_button {
+  background-color: #ffcc00;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  width: fit-content;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.review_button:hover {
+  background-color: #e6b800;
+}
+
+/* Order Summary */
+.order_summary {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
+  color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Empty State */
+.order_empty {
+  font-size: 1.2rem;
+  color: #cccccc;
+  text-align: center;
+  padding: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .order_item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .order_details {
+    align-items: center;
+  }
+
+  .order_image {
+    width: 100%;
+    max-width: 120px;
+  }
+}
+
+.review_rating-stars {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 24px;
+  color: #555; /* Default empty star */
+  transition: color 0.2s;
+}
+
+.star.filled {
+  color: gold;
+}
