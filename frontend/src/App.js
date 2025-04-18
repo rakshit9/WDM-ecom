@@ -19,6 +19,8 @@ import Footer from "./pages/Footer";
 import Main from "./pages/Main";
 import AccountSettings from "./pages/AccountSettings";
 import Order from "./pages/Order";
+import SellerChatDashboard from "./pages/SellerChatDashboard";
+import UserChatDashboard from "./pages/UserChatDashboard";
 // const PrivateRoute = ({ children }) => {
 //   const { user } = React.useContext(AuthContext);
 //   return user ? children : <Navigate to="/login" />;
@@ -44,7 +46,9 @@ function App() {
             <Route path="/order-confirmation" element={<OrderConfirmation />} />
             <Route path="/orders" element={<Order />} />
             <Route path="/accountsettings" element={<AccountSettings />} />
-
+            <Route path="/chatseller" element={<SellerChatDashboard />} />
+            <Route path="/chatuser" element={<UserChatDashboard />} />
+            
             <Route path="/dashboard" element={<Dashboard />}>
               <Route path="users" element={<Users />} />
               <Route path="products" element={<Products />} />
