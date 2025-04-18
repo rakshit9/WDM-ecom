@@ -1,4 +1,3 @@
-// config/database.js
 const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
@@ -11,10 +10,21 @@ const {
   DB_PORT,
 } = process.env;
 
+// Log loaded env variables
+console.log("🔍 Loaded environment variables:");
+console.log({
+  DB_NAME,
+  DB_USER,
+  DB_PASSWORD: DB_PASSWORD ? '✅ [HIDDEN]' : '❌ [EMPTY]',
+  DB_HOST,
+  DB_DIALECT,
+  DB_PORT,
+});
+
 const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   host: DB_HOST,
-  port: DB_PORT, // ✅ Important for Railway
-  dialect: DB_DIALECT,
+  port: DB_PORT,
+  dialect: DB_DIALECT || 'mysql',
   logging: false,
 });
 
@@ -28,13 +38,3 @@ const connectDB = async () => {
 };
 
 module.exports = { sequelize, connectDB };
-
-
-// PORT=5010
-// MONGO_URI=mongodb://localhost:27017/ecommerce-groceries
-// JWT_SECRET=ecommerceAI
-// DB_DIALECT=mysql       # or 'postgres'
-// DB_NAME=wdmecomm
-// DB_USER=root
-// DB_PASSWORD=
-// DB_HOST=localhost
