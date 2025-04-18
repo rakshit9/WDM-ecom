@@ -25,9 +25,10 @@ const sequelize = new Sequelize(DB_NAME, DB_USER, DB_PASSWORD, {
   host: DB_HOST,
   port: DB_PORT,
   dialect: DB_DIALECT || 'mysql',
-  logging: false,
+  logging: true,
 });
 
+console.log(sequelize,"for error checking")
 const connectDB = async () => {
   try {
     await sequelize.authenticate();
@@ -36,5 +37,5 @@ const connectDB = async () => {
     console.error('❌ Database connection error:', error);
   }
 };
-
+console.log(connectDB,"------testing--------");
 module.exports = { sequelize, connectDB };
