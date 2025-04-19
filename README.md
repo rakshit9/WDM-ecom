@@ -14,6 +14,10 @@ Details of clone project:
 ---
 
 ### e-Commerce Project Team 7
+```bash
+cd frontend
+npm install
+npm start
 
 #### Team Members
 
