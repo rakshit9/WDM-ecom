@@ -18,7 +18,7 @@ Details of clone project:
 cd frontend
 npm install
 npm start
-
+```
 #### Team Members
 
 - Rakshit Sarkheliya – 1002112755
