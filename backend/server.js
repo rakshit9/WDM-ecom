@@ -28,10 +28,13 @@ const io = new Server(server, {
 });
 
 // Middleware
-app.use("/api/uploads", express.static(path.join(__dirname, "public/uploads")));
+// app.use("/api/uploads", express.static(path.join(__dirname, "public/uploads")));
+app.use("api/uploads", express.static("/tmp/uploads"));
+
 app.use(express.json({ limit: "20mb" }));
 app.use(express.urlencoded({ limit: "20mb", extended: true }));
 app.use(cors());
+
 
 // API Routes
 app.use("/api/products", productRoutes);
@@ -79,7 +82,7 @@ io.on("connection", (socket) => {
 const PORT = process.env.PORT || 5010;
 
 sequelize
-  .sync({ alter: true }) // WARNING: Drops all tables
+  .sync({ alter : true }) // WARNING: Drops all tables
   .then(() => {
     console.log("✅ DB synced with force (all tables recreated)");
     server.listen(PORT, () => {
