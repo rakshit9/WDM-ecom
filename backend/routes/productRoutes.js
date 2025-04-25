@@ -746,7 +746,8 @@ router.post("/add", upload.array("images", 5), async (req, res) => {
     // ✅ Handle uploaded images
     let imagePaths = [];
     if (req.files && req.files.length > 0) {
-      imagePaths = req.files.map((file) => `/uploads/${file.filename}`);
+      imagePaths = req.files.map((file) => file.filename);
+
     }
 
     // Get the next productId
