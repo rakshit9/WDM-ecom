@@ -9,14 +9,20 @@ const { fn, col, Op } = require("sequelize");
 const generateProductDescription = require("../utils/aiHelper");
 
 const router = express.Router();
-
 const multer = require("multer");
 const path = require("path");
+const fs = require("fs");
+
+// ✅ Create /tmp/uploads if it does not exist
+const uploadDir = "/tmp/uploads";
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir, { recursive: true });
+}
 
 // Configure Multer storage
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "/tmp/uploads/"); // ✅ Always writable on Render
+    cb(null, uploadDir);
   },
   filename: (req, file, cb) => {
     const uniqueName = `${Date.now()}-${file.originalname}`;
@@ -24,8 +30,12 @@ const storage = multer.diskStorage({
   },
 });
 
+const upload = multer({ storage });
 
-const upload = multer({ storage }); // ✅ DEFINE 'upload' HERE
+
+
+
+
 
 router.get("/", async (req, res) => {
   try {
