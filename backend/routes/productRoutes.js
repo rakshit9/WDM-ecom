@@ -16,13 +16,14 @@ const path = require("path");
 // Configure Multer storage
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "public/uploads/"); // Make sure this folder exists
+    cb(null, "/tmp/uploads/"); // ✅ Always writable on Render
   },
   filename: (req, file, cb) => {
     const uniqueName = `${Date.now()}-${file.originalname}`;
     cb(null, uniqueName);
   },
 });
+
 
 const upload = multer({ storage }); // ✅ DEFINE 'upload' HERE
 
@@ -591,10 +592,13 @@ router.put("/:productId", async (req, res) => {
       title, // maps to Product.title
       type, // maps to Product.type
       price,
+      description,
       availableQty, // maps to Product.availableQty
       images, // maps to Product.images
       brand, // maps to Product.brand
     } = req.body;
+    
+    console.log(req.body);
 
     const { productId } = req.params;
 
