@@ -22,7 +22,7 @@ const server = http.createServer(app); // ✅ Use this for both Express and Sock
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // ✅ Make sure this matches your frontend
+    origin: "https://rxs2755.uta.cloud/", // ✅ Make sure this matches your frontend
     methods: ["GET", "POST"],
   },
 });
