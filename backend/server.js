@@ -29,7 +29,7 @@ const io = new Server(server, {
 
 // Middleware
 // app.use("/api/uploads", express.static(path.join(__dirname, "public/uploads")));
-app.use("api/uploads", express.static("/tmp/uploads"));
+app.use("/api/uploads", express.static("/tmp/uploads"));
 
 app.use(express.json({ limit: "20mb" }));
 app.use(express.urlencoded({ limit: "20mb", extended: true }));
